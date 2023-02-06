@@ -1,7 +1,7 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import Search from './search/search';
 import { Layout, Space } from 'antd';
-import Flights from './flights/flights';
+import FlightResults from './flight-results/flight-results';
 import { useState } from 'react';
 import { FlightSearchResult } from './models/flight-search-result';
 const { Header, Content } = Layout;
@@ -37,7 +37,7 @@ function App() {
         <Header className='header' style={headerStyle}>Buscador Smiles</Header>
         <Content className='content' style={contentStyle}>
           <Search onChange={newResults => setSearchResults(newResults)} />
-          <Flights results={searchResults} />
+          <FlightResults results={searchResults} />
         </Content>
       </Layout>
     </Space>

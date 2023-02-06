@@ -10,7 +10,10 @@ const columns: ColumnsType<FlightSearchResult> = [
     { title: 'Destino', dataIndex: 'destination', key: 'destination' },
     { title: 'Vuelos', dataIndex: 'count', key: 'count' },
     { title: 'Millas', dataIndex: 'miles', key: 'miles',
-        render: m => <Statistic value={m} precision={0} ></Statistic>
+        render: m => <Statistic
+            value={m} precision={0}
+            valueStyle={{ fontSize: 14, fontWeight: 'bold' }}
+        />
     },
     { title: 'Link', dataIndex: 'query', key: 'query', 
         render: q => {
@@ -22,8 +25,8 @@ const columns: ColumnsType<FlightSearchResult> = [
     },
 ];
 
-const Flights = ({ results = [] } : { results: FlightSearchResult[] }) => {
+const FlightResults = ({ results = [] } : { results: FlightSearchResult[] }) => {
     return <Table columns={columns} dataSource={results} pagination={false} />
 };
 
-export default Flights;
+export default FlightResults;

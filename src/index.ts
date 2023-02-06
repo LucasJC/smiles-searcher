@@ -16,10 +16,17 @@ const createWindow = (): void => {
     urls: ['*://api-air-flightsearch-prd.smiles.com.br/*', '*://*.smiles.com.br/*']
   };
   session.defaultSession.webRequest.onBeforeSendHeaders(filter, (details, callback) => {
+      delete details.requestHeaders['referer'];
+      delete details.requestHeaders['user-agent'];
+      delete details.requestHeaders['sec-ch-ua'];
+      delete details.requestHeaders['sec-ch-ua-mobile'];
+      delete details.requestHeaders['sec-ch-ua-platform'];
       callback({
         requestHeaders: {
           ...details.requestHeaders,
-          'Origin': 'https://smiles.com.ar'
+          'Origin': 'https://www.smiles.com.ar',
+          'Referer': 'https://www.smiles.com.ar/',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/109.0'
         }
       })
   });
@@ -50,7 +57,6 @@ const createWindow = (): void => {
   });
   // and load the index.html of the app.
   mainWindow.loadURL(MAIN_WINDOW_WEBPACK_ENTRY);
-
   
 };
 

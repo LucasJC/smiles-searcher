@@ -65,8 +65,9 @@ async function searchAPI(opts: {
   const response = await axios.get<SmilesAPIResult>(url, {
       withCredentials: false,
       headers: {
-          "Accept": "application/json, text/plain, */*",
+          "Accept": "application/json",
           "Accept-Language": "es-AR,es;q=0.8,en-US;q=0.5,en;q=0.3",
+          "Authorization": "Bearer Ul7QwCVElamEvBtOrUZ6VcJ9LX1roCuTa2vlb1pPxoUpjjavuwoEr8",
           "Region": "ARGENTINA",
           "Language": "es-ES",
           "Channel": "Web",

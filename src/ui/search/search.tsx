@@ -20,7 +20,7 @@ const labelStyle : React.CSSProperties = {
 
 const Search = ({ onChange } : { onChange : (results: FlightSearchResult[]) => void }) => {
     const [loading, setLoading] = useState(false);
-    const [origin, setOrigin] = useState<string | undefined>(undefined);
+    const [origin, setOrigin] = useState<string | undefined>('BUE');
     const [destination, setDestination] = useState<string[]>([]);
     const [from, setFrom] = useState<string | undefined>(undefined);
     const [to, setTo] = useState<string | undefined>(undefined);
@@ -57,7 +57,7 @@ const Search = ({ onChange } : { onChange : (results: FlightSearchResult[]) => v
             onFinish={onSubmit}
         >
             <Form.Item label={<label style={labelStyle}>Origen</label>} name="origin" rules={[{ required: true }]}
-                initialValue={'EZE'}
+                initialValue={origin}
             >
                 <Select
                     placeholder="Seleccionar origen"

@@ -9,6 +9,7 @@ interface Airport {
     timezone: string;
 }
 export let airports : Airport[] = [
+
 {"name": "Goroka ", "city": "Goroka", "country": "Papua New Guinea", "IATA": "GKA", "ICAO": "AYGA", "lat": "-6.081689834590001", "lon": "145.391998291", "timezone": "10"},
 {"name": "Madang ", "city": "Madang", "country": "Papua New Guinea", "IATA": "MAG", "ICAO": "AYMD", "lat": "-5.20707988739", "lon": "145.789001465", "timezone": "10"},
 {"name": "Mount Hagen Kagamuga ", "city": "Mount Hagen", "country": "Papua New Guinea", "IATA": "HGU", "ICAO": "AYMH", "lat": "-5.826789855957031", "lon": "144.29600524902344", "timezone": "10"},
@@ -3154,6 +3155,7 @@ export let airports : Airport[] = [
 {"name": "Socotra Intl ", "city": "Socotra", "country": "Yemen", "IATA": "SCT", "ICAO": "OYSQ", "lat": "12.63070011138916", "lon": "53.905799865722656", "timezone": "3"},
 {"name": "Memmingen Allgau ", "city": "Memmingen", "country": "Germany", "IATA": "FMM", "ICAO": "EDJA", "lat": "47.988800048799995", "lon": "10.2395000458", "timezone": "1"},
 {"name": "Nev\u015fehir Kapadokya ", "city": "Nevsehir", "country": "Turkey", "IATA": "NAV", "ICAO": "LTAZ", "lat": "38.7719", "lon": "34.5345", "timezone": "3"},
+{"name": "Buenos Aires: Todos los aeropuertos", "city": "Buenos Aires", "country": "Argentina", "IATA": "BUE", "ICAO": "___", "lat": "-34.8222", "lon": "-58.5358", "timezone": "-3"},
 {"name": "Ministro Pistarini Intl ", "city": "Buenos Aires", "country": "Argentina", "IATA": "EZE", "ICAO": "SAEZ", "lat": "-34.8222", "lon": "-58.5358", "timezone": "-3"},
 {"name": "Erbil Intl ", "city": "Erbil", "country": "Iraq", "IATA": "EBL", "ICAO": "ORER", "lat": "36.23759841918945", "lon": "43.963199615478516", "timezone": "3"},
 {"name": "Emerald ", "city": "Emerald", "country": "Australia", "IATA": "EMD", "ICAO": "YEML", "lat": "-23.5674991608", "lon": "148.179000854", "timezone": "10"},
